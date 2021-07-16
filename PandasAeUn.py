@@ -54,7 +54,7 @@ def AerialOrUnderground(folder):
 
             # ONLY AERIAL
             z += 1
-            print(z)
+            print(z-3)
             if True in (aerialEntryCableColumn.values & aerialLeavingCableColumn.values):
                 destinationSheet['E'f"{z}"].value = 'NIE'
 

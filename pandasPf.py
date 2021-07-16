@@ -2,7 +2,7 @@ import pandas as pd
 import glob
 import openpyxl
 
-saveTrack = r'C:\Users\marek.barul\Desktop\Python pliki\rozliczenia\testowy\1.xlsx'
+saveTrack = r'C:\Users\marek.barul\Desktop\Python pliki\rozliczenia\przetworzony plik\Fonbud.xlsx'
 
 def ConnectorType(folder, source):
     # Set options for displaying the sheet in the panel

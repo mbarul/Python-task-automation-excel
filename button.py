@@ -17,9 +17,9 @@ root.title('Automatyzacja działań')
 # Dimensions of main window
 root.geometry("500x500")
 # Icon
-root.iconbitmap('C:/Users/marek.barul/Desktop/FONBUD ICON.ico')
+root.iconbitmap('C:/Users/marek.barul/Desktop/Python pliki/rozliczenia/FONBUD ICON.ico')
 
-# Funkcja, która umożliwi nam wywołanie wartości na podstawie buttona
+# Funkcja, will run when we click at button "Zaakceptuj"
 def OnClick():
     ConnectorType(spliceCardsBox.get(), sourceFileBox.get())
     MufsNumbers(spliceCardsBox.get())
@@ -29,10 +29,10 @@ def OnClick():
 spliceCardsFrame = LabelFrame(
     root, text="Podaj lokalizację folderu Splice Cards", padx=5, pady=5)
 spliceCardsFrame.pack()
-# Okienko wpisywania komend
+# Window to write a command
 spliceCardsBox = Entry(spliceCardsFrame, width=70, borderwidth=5)
 spliceCardsBox.insert(0, "")
-# Położenie okienka, gdzie wpisujemy wartość
+# Location of window
 spliceCardsBox.pack(pady=20)
 # Open folder dialog box
 def selectFolder():
@@ -71,7 +71,7 @@ def selectSourceFile():
     )
     sourceFileBox.insert(0, f'{filename}')
     showinfo(
-        title='Selected File',
+        title='Wybrany plik',
         message=filename
     )
 
@@ -80,10 +80,10 @@ openFileButton = ttk.Button(
 )
 openFileButton.pack()
 
-# Button, które zatwierdzi funkcje
+# Button of function OnClick
 myButton = tk.Button(root, text="Zaakceptuj", width=10, command=OnClick)
 myButton.pack()
-# Button do zakończenia aplikacji
+# Button to quit from the app
 buttonQuit = Button(root, text="Zakończ", width=10, command=root.quit)
 buttonQuit.pack()
 
